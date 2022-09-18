@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_odoo_fakultas_all,odoo_fakultas all,odoo_university.model_odoo_fakultas,,1,1,1,1
+access_odoo_prodi_all,odoo_prodi all,odoo_university.model_odoo_prodi,,1,1,1,1
+access_odoo_tag_all,odoo_tag all,odoo_university.model_odoo_tag,,1,1,1,1
+access_odoo_mahasiswa_all,odoo_mahasiswa all,odoo_university.model_odoo_mahasiswa,,1,1,1,1

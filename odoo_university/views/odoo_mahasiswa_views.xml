@@ -1,0 +1,49 @@
+<odoo>
+    <data>
+         <record id="view_odoo_mahasiswa_form" model="ir.ui.view">
+            <field name="name">Form Mahasiswa</field>
+            <field name="model">odoo.mahasiswa</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="nim" required="1"/>
+                            <field name="nama" required="1"/>
+                            <field name="kelas" required="1"/>
+                            <field name="semester" required="1"/> 
+                            <field name="prodi_id" required="1"/>                         
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+         </record>
+        <record id="view_odoo_mahasiswa_tree" model="ir.ui.view">
+            <field name="name">Form Mahasiswa</field>
+            <field name="model">odoo.mahasiswa</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nim" required="1"/>
+                    <field name="nama" required="1"/>
+                    <field name="kelas" required="1"/>
+                    <field name="semester" required="1"/>
+                </tree>
+             </field>
+        </record>
+                
+        <record id="action_odoo_mahasiswa" model="ir.actions.act_window">
+            <field name="name">Mahasiswa</field>
+            <field name="res_model">odoo.mahasiswa</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem
+            id="menu_root_odoo_university"
+            name="Odoo University"/>
+
+        <menuitem
+            id="menu_odoo_mahasiswa"
+            name="Mahasiswa"
+            action="action_odoo_mahasiswa"
+            parent="odoo_university.menu_root_odoo_university"/> 
+    </data>
+</odoo>

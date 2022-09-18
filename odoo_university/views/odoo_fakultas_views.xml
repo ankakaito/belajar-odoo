@@ -1,0 +1,54 @@
+<odoo>
+    <data>
+         <record id="view_odoo_fakultas_form" model="ir.ui.view">
+            <field name="name">Form Fakultas</field>
+            <field name="model">odoo.fakultas</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name" required="1"/>
+                            <field name="code" required="1"/>
+                        </group>
+                        <notebook>
+                            <page string="Daftar Program Studi">
+                                <field name="prodi_ids">
+                                    <tree editable="bottom">
+                                        <field name="name" required="1"/>
+                                        <field name="code" required="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+         </record>
+        <record id="view_odoo_fakultas_tree" model="ir.ui.view">
+            <field name="name">Form Fakultas</field>
+            <field name="model">odoo.fakultas</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="code"/>
+                </tree>
+             </field>
+        </record>
+                
+        <record id="action_odoo_fakultas" model="ir.actions.act_window">
+            <field name="name">Fakultas</field>
+            <field name="res_model">odoo.fakultas</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem
+            id="menu_root_odoo_university"
+            name="Odoo University"/>
+
+        <menuitem
+            id="menu_odoo_fakultas"
+            name="Fakultas"
+            action="action_odoo_fakultas"
+            parent="odoo_university.menu_root_odoo_university"/> 
+    </data>
+</odoo>
