@@ -8,10 +8,11 @@
                     <sheet>
                         <group>
                             <field name="nim" required="1"/>
-                            <field name="nama" required="1"/>
+                            <field name="name" required="1"/>
                             <field name="kelas" required="1"/>
                             <field name="semester" required="1"/> 
-                            <field name="prodi_id" required="1"/>                         
+                            <field name="fak_id" required="1"/>
+                            <field name="prodi_id" required="1"/>                          
                         </group>
                     </sheet>
                 </form>
@@ -23,9 +24,10 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="nim" required="1"/>
-                    <field name="nama" required="1"/>
+                    <field name="name" required="1"/>
                     <field name="kelas" required="1"/>
                     <field name="semester" required="1"/>
+                    <field name="fak_id" required="1"/>  
                 </tree>
              </field>
         </record>

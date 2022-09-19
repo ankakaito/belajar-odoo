@@ -9,3 +9,4 @@ class OdooProdi(models.Model):
     code = fields.Char('Kode prodi')
     fakultas_id = fields.Many2one("odoo.fakultas","Fakultas")
     tag_ids = fields.Many2many("odoo.tag","rel_prodi_tag","prodi_id","tag_id","Panggilan")
+    mahasiswa_ids = fields.One2many('odoo.mahasiswa', 'prodi_id','Prodi')

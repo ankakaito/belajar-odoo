@@ -11,7 +11,20 @@
                             <field name="code" required="1"/>
                             <field name="fakultas_id" required="1"/>
                             <field name="tag_ids" widget="many2many_tags"/>
+                            <field name="mahasiswa_ids" /> 
                         </group>
+                        <notebook>
+                            <page string="Daftar Mahasiswa">
+                                <field name="mahasiswa_ids">
+                                    <tree editable="bottom">
+                                        <field name="name" required="1"/>
+                                        <field name="nim" required="1"/>
+                                        <field name="kelas" required="1"/>
+                                        <field name="prodi_id" required="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>                         
                     </sheet>
                 </form>
             </field>
